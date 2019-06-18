@@ -1,0 +1,41 @@
+// Place all the styles related to the Posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.contain{
+    width: 60%;
+    margin: 30px auto;
+    padding: 5px;
+    
+}
+
+.article{
+   border: 0.5px  solid #382284;
+   border-radius: 10px;
+   margin: 5px 5px 10px 5px ;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.caption{
+    font-size: 55px;
+    margin: 2px 20px 2px 40px ;
+}
+.func{
+    float: right;
+    margin: 5px 20px 0px 0px;
+}
+
+.edit {
+    margin: 20px 20px 0px 5px;
+    font-size: 30px;
+}
+
+.destroy{
+    margin: 20px 5px 0px 5px;
+    font-size: 30px;
+}

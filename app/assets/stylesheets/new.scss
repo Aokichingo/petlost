@@ -1,0 +1,24 @@
+input[type="text"],textarea{
+      box-sizing:border-box;
+      width: 60%;
+      padding: 5px;
+}
+
+textarea{
+    height: 140px;
+}
+
+.errors{
+     font-size: 14px;
+     font-weight: bold;
+     color: tomato;
+}
+
+.command{
+    font-size: 12px;
+}
+
+.post{
+    width: 70%;
+    margin: 20px auto;
+}

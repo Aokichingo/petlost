@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pet</title>
+    <%= csrf_meta_tags %>
+    <meta http-equiv="content-type" content="text/html" charset = "utf-8">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+    <div class="header-title">落とし物リスト</div>
+    <div class= "header-right">
+    <%= link_to "トップへ", "/" %>
+    <%= link_to "捜査依頼", "/posts/new" %>
+    </div>
+    </header>
+    <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+    <%= yield %>
+    <footer>
+      <p class="copyright">copyright © PENGIN Co. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
