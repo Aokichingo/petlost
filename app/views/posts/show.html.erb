@@ -1,11 +1,31 @@
-<div class=main>
-
-<div class ="sub">
-<div class="w">落とし物</div>
-<h2><%= @post.title %></h2>
-<div class="w">要件</div>
-<h2><%= @post.body %></h2>
-<p><%= @post.updated_at %>　更新</p>
+<div class="sub">
+<h2 class="w">お名前</h2>
+<p><%= @post.title %></p>
+ <h2 class="w">内容</h2>
+<p><%= @post.body %></p>
 </div>
 
+<div class="sub">
+<h3>コメント</h3>
+<% if @post.comments.any? %>
+ <ul>
+    <% @post.comments.each do |comment| %>
+  <li>
+      <%= comment.body %>
+      <%= link_to '[×]', post_comment_path(@post,comment), method: :delete ,
+ class: 'destroy_1', data: {confirm: '削除してもよろしいでしょうか？'}%>
+  </li>
+    <% end %>
+ </ul>
+<% end %>
+<%= form_for ([@post, @post.comments.build ])  do |f| %>
+
+<p>
+<%= f.text_field :body %>
+</p>
+
+<p>
+<%= f.submit %>
+</p>
+<% end %>
 </div>

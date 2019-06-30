@@ -21,7 +21,8 @@
  
  
 header{
-    background-color:#0178bc;
+    margin:0px;
+    background-color:#008B8B;
     color:white;
     text-align:center;
 }
@@ -32,21 +33,28 @@ header{
 footer{
     margin:0;
     text-align:center;
-    background-color:#0178bc;
+    background-color:#008B8B;
     color:white;
+   margin-top:auto;
     height:80px;
     width:100%;
 }
 
 .header-right{
-     color: #382284;
      font-size:25px;
 }
 .flash{
     font-size:40px;
     color:white;
     text-align: center;
-    background-color:#009b85;
+    background-color:#00BFFF;
+}
+
+.main{
+    margin:0px;
+    height:100%;
+    background-color:#F5FFFA;
+    background-size: cover;
 }
 
 @media screen and (max-width:600px){

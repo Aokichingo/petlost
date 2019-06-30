@@ -4,16 +4,19 @@
     <title>Pet</title>
     <%= csrf_meta_tags %>
     <meta http-equiv="content-type" content="text/html" charset = "utf-8">
+    <!-- fontawesome -->
+ <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+　　　<!-- end -->
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <header>
-    <div class="header-title">落とし物リスト</div>
+    <div class="header-title">落とし物リスト<i class="fas fa-wallet"></i></div>
     <div class= "header-right">
-    <%= link_to "トップへ", "/" %>
-    <%= link_to "捜査依頼", "/posts/new" %>
+    <%= link_to "トップへ", root_path %>
+    <%= link_to "新規投稿", new_post_path %>
     </div>
     </header>
     <% if flash[:notice] %>
@@ -21,7 +24,9 @@
         <%= flash[:notice] %>
       </div>
     <% end %>
+    <div class=main>
     <%= yield %>
+    </div>
     <footer>
       <p class="copyright">copyright © PENGIN Co. All Rights Reserved.</p>
     </footer>

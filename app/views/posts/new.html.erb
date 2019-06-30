@@ -1,30 +1,5 @@
-<div class="main">
 <div class="post">
-<h1>新規投稿</h1>
-<%= form_for :post, url:"/posts/create" do |f| %>
-
-<p>
-<%=f.text_field :title,placeholder:'落とし物' %>
-<% if @post.errors.messages[:title].any? %>
- <span class="errors">
- <%= @post.errors.messages[:title][0] %>
- </span>
-<% end %>
-</p>
-   
-<p>
-<%=f.text_area :body,placeholder:'要件' %>
-<% if @post.errors.messages[:body].any? %>
- <span class="errors">
- <%= @post.errors.messages[:body][0] %>
- </span>
-<% end %>
-</p>
-
-<p>
-<%= f.submit %>
-</p>
-
-<% end %>
+<h2>新規投稿</h2>
+<%= render 'form' %>
 </div>
-</div>
+

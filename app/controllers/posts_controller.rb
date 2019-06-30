@@ -27,7 +27,7 @@ class PostsController < ApplicationController
     end
     
     def update
-     @post = Post.find(params[:id])
+     @post = Post.find(:params[:id])
     if @post.update(post_params)
       flash[:notice]="編集しました"
        redirect_to "/"
@@ -41,6 +41,7 @@ class PostsController < ApplicationController
       @post.destroy
       redirect_to "/"
     end
+    
  private
     def post_params
      params.require(:post).permit(:title, :body)

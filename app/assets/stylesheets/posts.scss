@@ -2,7 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 .contain{
     width: 60%;
     margin: 30px auto;
@@ -22,6 +21,7 @@ a{
 }
 
 .caption{
+    color:#000000;
     font-size: 55px;
     margin: 2px 20px 2px 40px ;
 }
@@ -31,11 +31,13 @@ a{
 }
 
 .edit {
+    color:#000000;
     margin: 20px 20px 0px 5px;
     font-size: 30px;
 }
 
 .destroy{
+    color:#000000;
     margin: 20px 5px 0px 5px;
     font-size: 30px;
 }

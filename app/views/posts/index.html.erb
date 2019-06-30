@@ -1,15 +1,14 @@
 
-<div class=main>
+
 <div class="contain">
 <% @posts.each do |post| %>
 <div class="article">
-<%= link_to post.title, "/#{post.id}", class:"caption" %>
+<%= link_to post.title, post_path(post), class:"caption" %>
 <div class="func">
-<%= link_to '[編集]', ("/posts/#{post.id}/edit"), class:"edit" %>
-<%= link_to '[削除]', ("/posts/#{post.id}/destroy"),
+<%= link_to '[編集]', edit_post_path(post), class:"edit" %>
+<%= link_to '[削除]', post_path(post),
 method: :delete, class:"destroy",data:{confirm: '削除しても大丈夫ですか？'} %>
 </div>
 </div>
 <% end %>
-</div>
 </div>
