@@ -6,7 +6,7 @@
 <% end %>
 </p>
 <p>
-<%= f.text_area :description, placeholder: '内容' %>
+<%= f.text_area :body, placeholder: '内容' %>
 <% if @post.errors.messages[:body].any? %>
 <span class="error"><%= @post.errors.messages[:body][0]%></span>
 <% end %>
